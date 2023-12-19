@@ -70,8 +70,14 @@
                         </div>
                     </div>
                 </div>
-                    <input type="submit" value="proceed to checkout" class="sub">
-            </form>
+                    <button type="submit" class="sub" onclick="openPopup()">proceed to checkout</button>
+                    <div class="popup" id="popup">
+                        <img src="images.jpg">
+                        <h2>Thank You!</h2>
+                        <p>For choosing Pop bookings.Your payment is done successfully.</p>
+                        <button type="button" onclick="closePopup()" >Ok</button>
+                    </div>
+                    </form>
         </div>
         <div class="footer-tag">
             <footer>
@@ -88,5 +94,17 @@
         </div>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<script>
+let popup=document.getElementById("popup");
+function openPopup() {
+    popup.classList.add("open-popup");
+    event.preventDefault();
+}
+function closePopup() {
+    popup.classList.remove("open-popup");
+}
+</script>
     </body>
 </html>
